@@ -1,4 +1,4 @@
-FROM tensorflow/serving:latest
+FROM tensorflow/serving:latest-devel-gpu
 COPY . /app
 
 RUN pip install -r /app/requirements.txt
