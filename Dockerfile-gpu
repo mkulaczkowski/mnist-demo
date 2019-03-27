@@ -1,4 +1,4 @@
-FROM tensorflow/serving:latest-devel-gpu
+FROM tensorflow/tensorflow:1.13.1-gpu-py3
 COPY . /app
 
 RUN pip install -r /app/requirements.txt
