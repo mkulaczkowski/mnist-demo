@@ -20,7 +20,7 @@ import mnist_input_data
 tf.app.flags.DEFINE_integer('training_iteration', 1000,
                             'number of training iterations.')
 tf.app.flags.DEFINE_integer('model_version', 1, 'version number of the model.')
-tf.app.flags.DEFINE_string('work_dir', '/tmp', 'Working directory.')
+tf.app.flags.DEFINE_string('work_dir', os.environ.get('PS_JOBSPACE', '/tmp'), 'Working directory.')
 FLAGS = tf.app.flags.FLAGS
 
 
